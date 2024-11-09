@@ -38,6 +38,7 @@
     "sanity": "^3.63.0",
     "sanity-plugin-markdown": "^5.0.0",
     "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
