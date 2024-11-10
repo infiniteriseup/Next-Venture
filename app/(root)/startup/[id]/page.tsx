@@ -21,10 +21,11 @@ export const experimental_ppr = true
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id
 
+  //parallel request fetching
   const [post, { select: editorPosts }] = await Promise.all([
     client.fetch(STARTUP_BY_ID_QUERY, { id }),
     client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-      slug: "editor-picks-new",
+      slug: "editor-picks",
     }),
   ])
 
@@ -45,7 +46,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <img
           src={post.image}
           alt="thumbnail"
-          className="w-full h-auto rounded-xl"
+          className="w-full max-h-[650px] h-auto rounded-xl object-cover"
         />
 
         <div className="space-y-5 mt-10 max-w-4xl mx-auto">
@@ -85,7 +86,17 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         <hr className="divider" />
 
-        {/* TODO: editor selected startups */}
+        {editorPosts && editorPosts.length > 0 && (
+          <div className="max-w-4xl mx-auto">
+            <p className="text-30-semibold">Editor Picks</p>
+
+            <ul className="mt-7 card_grid-sm">
+              {editorPosts.map((post: StartupTypeCard, i: number) => (
+                <StartupCard key={i} post={post} />
+              ))}
+            </ul>
+          </div>
+        )}
 
         <Suspense fallback={<Skeleton className="view_skeleton" />}>
           <View id={id} />
