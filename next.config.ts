@@ -1,5 +1,5 @@
-import { withSentryConfig } from "@sentry/nextjs"
-import type { NextConfig } from "next"
+import { withSentryConfig } from "@sentry/nextjs";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
@@ -20,14 +20,14 @@ const nextConfig: NextConfig = {
     buildActivity: true,
     buildActivityPosition: "bottom-right",
   },
-}
+};
 
 export default withSentryConfig(nextConfig, {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
   org: "aayushbharti",
-  project: "javascript-nextjs",
+  project: "next-venture",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
@@ -60,4 +60,4 @@ export default withSentryConfig(nextConfig, {
   // https://docs.sentry.io/product/crons/
   // https://vercel.com/docs/cron-jobs
   automaticVercelMonitors: true,
-})
+});
