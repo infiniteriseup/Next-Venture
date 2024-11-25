@@ -1,22 +1,21 @@
 <div align="center">
-  <br />
+  <!-- <br /> -->
     <!-- <a href="https://aayushbharti.vercel.app" target="_blank">
       <img src="https://github.com/user-attachments/assets/471e2baa-8781-43b8-aaed-62e313d03e99" alt="Project Banner">
     </a> -->
-  <br />
+  <!-- <br /> -->
 
   <div>
     <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=react&color=3178C6" alt="typescript" />
     <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
     <img src="https://img.shields.io/badge/-Sanity-black?style=for-the-badge&logoColor=white&logo=sanity&color=F03E2F" alt="sanity" />
-
   </div>
 
 <h3 align="center">Next Venture - Startup Directory Platform</h3>
 
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
+     A platform where entrepreneurs can submit their startup ideas for virtual pitch competitions, browse other pitches, and gain exposure through a clean minimalistic design for a smooth user experience.
     </div>
 </div>
 
@@ -26,7 +25,7 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-5. 🚀 [More](#more)
+<!-- 5. 🚀 [More](#more) -->
 
 ## 🚨 About
 
