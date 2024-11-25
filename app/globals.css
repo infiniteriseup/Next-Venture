@@ -48,7 +48,7 @@
   }
 
   .pink_container {
-    @apply w-full bg-primary min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6;
+    @apply w-full min-h-[530px] flex justify-center items-center flex-col py-10 px-6 bg-coverImg;
   }
 
   .tag {
@@ -56,7 +56,7 @@
   }
 
   .heading {
-    @apply uppercase bg-black px-6 py-3 font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5;
+    @apply uppercase bg-black rounded-xl px-6 py-3 font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5;
   }
 
   .sub-heading {
@@ -216,4 +216,11 @@
 
 .w-md-editor-toolbar {
   padding: 10px !important;
+}
+
+.bg-coverImg {
+  background-image: url("/bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
