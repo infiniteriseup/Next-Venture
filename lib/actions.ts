@@ -1,14 +1,15 @@
 "use server"
 
+import slugify from "slugify"
+
 import { auth } from "@/auth"
 import { parseServerActionResponse } from "@/lib/utils"
-import slugify from "slugify"
 import { writeClient } from "@/sanity/lib/write-client"
 
 export const createPitch = async (
   state: any,
   form: FormData,
-  pitch: string
+  pitch: string,
 ) => {
   const session = await auth()
 
@@ -19,7 +20,7 @@ export const createPitch = async (
     })
 
   const { title, description, category, link } = Object.fromEntries(
-    Array.from(form).filter(([key]) => key !== "pitch")
+    [...form].filter(([key]) => key !== "pitch"),
   )
 
   const slug = slugify(title as string, { lower: true, strict: true })
