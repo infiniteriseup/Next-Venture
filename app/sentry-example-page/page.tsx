@@ -1,7 +1,7 @@
 "use client"
 
-import Head from "next/head"
 import * as Sentry from "@sentry/nextjs"
+import Head from "next/head"
 
 export default function Page() {
   return (
@@ -55,11 +55,11 @@ export default function Page() {
                 op: "test",
               },
               async () => {
-                const res = await fetch("/api/sentry-example-api")
-                if (!res.ok) {
+                const response = await fetch("/api/sentry-example-api")
+                if (!response.ok) {
                   throw new Error("Sentry Example Frontend Error")
                 }
-              }
+              },
             )
           }}
         >
