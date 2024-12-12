@@ -1,10 +1,10 @@
-import Navbar from "../../components/Navbar"
+import Navbar from "@/components/navbar"
 
 export default function Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <main className="font-work-sans">
+    <main className="relative mx-auto">
       <Navbar />
       {children}
     </main>
