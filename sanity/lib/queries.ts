@@ -100,3 +100,18 @@ export const PLAYLIST_BY_SLUG_QUERY =
     pitch
   }
 }`)
+
+export const RECENT_STARTUPS_QUERY =
+  defineQuery(`*[_type == "startup" && defined(slug.current)] | order(_createdAt desc)[0...5] {
+  _id, 
+  title, 
+  slug,
+  _createdAt,
+  author -> {
+    _id, name, image, bio
+  }, 
+  views,
+  description,
+  category,
+  image,
+}`)
