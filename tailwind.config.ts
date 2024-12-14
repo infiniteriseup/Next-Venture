@@ -8,29 +8,71 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        md: "2rem",
+        lg: "4rem",
+      },
+    },
     extend: {
       screens: {
-        xs: "475px",
+        sm: "375px",
+        md: "768px",
+        lg: "1200px",
       },
       colors: {
-        primary: {
-          "100": "#FFE8F0",
-          DEFAULT: "#4b0082",
+        primaryText: {
+          DEFAULT: "#ffffe3",
         },
-        secondary: "#FBE843",
         black: {
-          "100": "#333333",
-          "200": "#141413",
-          "300": "#7D8087",
-          DEFAULT: "#000000",
+          "100": "#000000",
+          "200": "rgba(17, 25, 40, 0.75)",
+          "300": "rgba(255, 255, 255, 0.125)",
+          DEFAULT: "#000",
         },
         white: {
-          "100": "#F7F7F7",
-          DEFAULT: "#FFFFFF",
+          "100": "#BEC1DD",
+          "200": "#C1C2D3",
+          DEFAULT: "#ffffe3",
+        },
+        blue: {
+          "100": "#E4ECFF",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
         chart: {
           "1": "hsl(var(--chart-1))",
           "2": "hsl(var(--chart-2))",
@@ -39,18 +81,10 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
-      fontFamily: {
-        "work-sans": ["var(--font-work-sans)"],
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      boxShadow: {
-        100: "2px 2px 0px 0px rgb(0, 0, 0)",
-        200: "2px 2px 0px 2px rgb(0, 0, 0)",
-        300: "2px 2px 0px 2px #4b0082",
       },
     },
   },
