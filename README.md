@@ -101,7 +101,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/AayushBharti/Next-ventures.git
+git clone https://github.com/infiniteriseup/Next-ventures.git
 cd pitchify
 ```
 
